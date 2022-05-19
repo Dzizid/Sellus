@@ -11,4 +11,6 @@
     $sim = strlen(string:$foo);
 
     echo '<br>' . $foo . ' в данном числе ' . $sim . ' символов';
+
+    echo $foo * $c;
 ?>
