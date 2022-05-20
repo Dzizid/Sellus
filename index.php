@@ -1,14 +1,22 @@
 <?
-    $a = $_GET['number_One'];
-    $b = $_GET['number_Two'];
+    $a = htmlspecialchars($_GET['number_One']);
+    $b = htmlspecialchars($_GET['number_Two']);
 
     $c = $a * $b;
 
-    echo $_GET['number_One'] . ' умноженное на ' . $_GET['number_Two'] . ' = ' . $c;
-    
-    $foo = intval($c);
+    echo htmlspecialchars($_GET['number_One']) . ' умноженное на ' . htmlspecialchars($_GET['number_Two']) . ' = ' . $c;
 
-    $sim = strlen(string:$foo);
+    $c = abs($c);
 
-    echo '<br>' . $foo . ' в данном числе ' . $sim . ' символов';
+    function recursion($c) {
+        if ($c < 10) {
+            echo ' Однозначное ';
+        } elseif ($c < 100) {
+            echo ' Двухзначное ';
+        } else {
+            echo ' Трехзначное ';
+        }
+    }
+
+    echo recursion($c);
 ?>
