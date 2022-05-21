@@ -8,15 +8,13 @@
 
     $c = abs($c);
 
-    function recursion($c) {
-        if ($c < 10) {
-            echo ' Однозначное ';
-        } elseif ($c < 100) {
-            echo ' Двухзначное ';
-        } else {
-            echo ' Трехзначное ';
-        }
+    if ($c < 10) {
+        echo ' Однозначное ';
+    } else if ($c < 100) {
+        echo ' Двухзначное ';
+    } else if ($c < 1000) {
+        echo ' Трехзначное ';
+    } else if ($c > 1000) {
+        echo ' Такое мы не изучали ';
     }
-
-    echo recursion($c);
 ?>
