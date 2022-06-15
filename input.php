@@ -11,8 +11,8 @@
 <body>
 
     <form action="index.php" method="get">
-        Num one: <input type="number" name="number_One" /><br />
-        Num two: <input type="number" name="number_Two" /><br />
+        Num one: <input type="number" name="a" /><br />
+        Num two: <input type="number" name="b" /><br />
         <input type="submit" name="submit" value="Отправь меня!" />
     </form>
 
